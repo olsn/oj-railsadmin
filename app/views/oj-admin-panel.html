@@ -1,0 +1,39 @@
+<div class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">oj.RailsAdmin</a>
+    </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+            <li class="{{currentModel==model?'active':''}}" ng-repeat="model in oa.models">
+                <a ng-click="setCurrentModel(model)">{{model}}s</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="oa-title-bar clearfix">
+    <span style="font-size: 25px; line-height: 40px">{{currentModel}}s</span>
+    <a class="btn btn-primary pull-right" data-toggle="modal" data-target="#createNewModal">New {{currentModel}}</a>
+</div>
+
+<div class="col-sm-12">
+    <div oj-model-list="{{currentModel}}" />
+</div>
+
+<div class="modal fade" id="createNewModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">New {{currentModel}}</h4>
+      </div>
+      <div class="modal-body">
+        <div oj-model-create="{{currentModel}}" />
+      </div>
+    </div>
+  </div>
+</div>

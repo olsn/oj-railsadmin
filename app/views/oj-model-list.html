@@ -1,0 +1,37 @@
+<table class="table table-hovered table-condensed">
+    <thead>
+        <tr>
+            <th ng-repeat="attribute in listedAttributes(model)" ng-click="setOrderBy(attribute.name)">
+                <i ng-if="!attribute.class_name" class="fa fa-sort" style="font-size: 75%;"></i>
+                {{attribute.association_name||attribute.name}}
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="resource in oa.collections[model] | orderBy:order:reverse">
+            <td ng-repeat="attribute in listedAttributes(model) track by $index">
+                {{valueOfResourceForAttribute(resource, attribute)}}
+
+                <span ng-if="isArray(c_value)"
+                      ng-repeat="sval in c_value track by $index"
+                      class="label label-primary"
+                      style="margin-right: 2px; font-size: 100%; font-weight: normal;">
+                    {{(sval.name||sval.id)}}
+                </span>
+
+                <span ng-if="isResource(c_value)"
+                      class="label label-primary"
+                      style="margin-right: 2px; font-size: 100%; font-weight: normal;">
+                    {{(c_value.name||c_value.id)}}
+                </span>
+                
+                <span ng-if="!isArray(c_value) && !isResource(c_value)">
+                     {{c_value||'-'}}
+                </span>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+

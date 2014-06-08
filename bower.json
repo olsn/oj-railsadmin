@@ -1,20 +1,20 @@
 {
   "name": "oj-railsadmin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "angular": "1.2.15",
     "json3": "~3.2.6",
     "es5-shim": "~2.1.0"
   },
   "main": [
-  	"./app/styles/main.css",
-  	"./app/scripts/services/ojadmin.js",
-  	"./app/scripts/directives/oj-model-list.js",
-  	"./app/scripts/directives/oj-model-create.js",
-  	"./app/scripts/directives/oj-admin-panel.js",
-  	"./app/scripts/controllers/ojmodellist.js",
-  	"./app/scripts/controllers/ojmodelcreate.js",
-  	"./app/scripts/controllers/ojadminpanel.js"
+  	"app/styles/main.css",
+  	"app/scripts/services/ojadmin.js",
+  	"app/scripts/directives/oj-model-list.js",
+  	"app/scripts/directives/oj-model-create.js",
+  	"app/scripts/directives/oj-admin-panel.js",
+  	"app/scripts/controllers/ojmodellist.js",
+  	"app/scripts/controllers/ojmodelcreate.js",
+  	"app/scripts/controllers/ojadminpanel.js"
   ],
   "devDependencies": {
     "angular-mocks": "1.2.15",

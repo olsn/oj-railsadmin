@@ -14,7 +14,7 @@
   	"./app/scripts/directives/oj-admin-panel.js",
   	"./app/scripts/controllers/ojmodellist.js",
   	"./app/scripts/controllers/ojmodelcreate.js",
-  	"./app/scripts/controllers/ojadminpanel.js",
+  	"./app/scripts/controllers/ojadminpanel.js"
   ],
   "devDependencies": {
     "angular-mocks": "1.2.15",

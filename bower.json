@@ -1,6 +1,6 @@
 {
   "name": "oj-railsadmin",
-  "version": "0.0.4",
+  "version": "0.0.2",
   "dependencies": {
     "angular": "1.2.15",
     "json3": "~3.2.6",

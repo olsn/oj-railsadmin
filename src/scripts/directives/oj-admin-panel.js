@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adminDashboardApp')
+angular.module('oj.RailsAdmin')
   .directive('ojAdminPanel', function () {
     return {
       templateUrl: 'views/oj-admin-panel.html',

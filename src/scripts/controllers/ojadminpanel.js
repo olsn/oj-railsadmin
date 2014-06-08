@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adminDashboardApp')
+angular.module('oj.RailsAdmin')
   .controller('OjadminpanelCtrl', function ($scope, OjAdmin) {
   	var oa = $scope.oa = OjAdmin;
   	$scope.currentModel = oa.models[0];
